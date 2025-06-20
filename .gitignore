@@ -1,0 +1,20 @@
+# Archivos y carpetas a ignorar por git
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno de desarrollo
+.vscode/
+.idea/
+*.code-workspace
+
+# Dependencias (si usas npm/yarn en el futuro)
+node_modules/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos de sistema de Windows
+desktop.ini

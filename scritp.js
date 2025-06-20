@@ -61,8 +61,22 @@ btnSearch.addEventListener("click", async () => {
             <h2>Clima en ${cityValue}, ${countryValue}</h2>
             <p>Temperatura: ${weatherData.temperature_2m[0]}°C</p>
             <p>Condición: ${wmoCodes[weatherData.weathercode[0]] || "Desconocida"}</p>
+            <p>Probabilidad de precipitación: ${weatherData.precipitation_probability[0]}%</p>
         `;
+
     } catch (error) {
         weatherContent.innerHTML = `<p style='color: red;'>${error.message}</p>`;
+    }
+});
+
+btnReset.addEventListener("click", async () => {
+
+    try {
+        city.value = "";
+        country.value = "";
+        weatherContent.textContent = `Aquí aparecerá el resultado`;
+
+    } catch (error) {
+        weatherContent.innerHTML = `<p style='color: red;'>No se Pudo hacer el reinicio</p>`;
     }
 });
